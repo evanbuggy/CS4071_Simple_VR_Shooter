@@ -41,7 +41,6 @@ public class Enemy : MonoBehaviour
         {
             agent.destination = goToList[nextGoTo].position;
         }
-
     }
 
     private void OnTriggerEnter(Collider other)

@@ -8,6 +8,7 @@ public class Pistol : MonoBehaviour
 {
     public ParticleSystem particles;
     public GameObject sightline;
+    public ParticleSystem killEffect;
 
     // Could revisit this and add a boolean so you can't hold shoot
     // or maybe a firing rate
@@ -27,6 +28,7 @@ public class Pistol : MonoBehaviour
         {
             if (raycastHit.collider.CompareTag("Enemy"))
             {
+                Instantiate(killEffect, raycastHit.point, Quaternion.identity);
                 Destroy(raycastHit.collider.gameObject);
             }
         }
