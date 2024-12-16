@@ -23,6 +23,13 @@ public class Pistol : MonoBehaviour
     public void StartShoot()
     {
         particles.Play();
+        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit raycastHit))
+        {
+            if (raycastHit.collider.CompareTag("Enemy"))
+            {
+                Destroy(raycastHit.collider.gameObject);
+            }
+        }
     }
 
     public void StopShoot()

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Disposable
   - goTo
+  - Enemy
   layers:
   - Default
   - TransparentFX
