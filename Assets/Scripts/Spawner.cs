@@ -9,7 +9,7 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
-        spawntimer = Random.Range(5000, 10000);
+        spawntimer = Random.Range(600, 800);
     }
 
     // Update is called once per frame
@@ -22,7 +22,7 @@ public class Spawner : MonoBehaviour
         else
         {
             Instantiate(enemy, transform.position, Quaternion.identity);
-            spawntimer = Random.Range(5000, 10000);
+            spawntimer = Random.Range(600, 800);
         }
     }
 }
